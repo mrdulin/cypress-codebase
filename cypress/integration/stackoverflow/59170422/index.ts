@@ -19,7 +19,6 @@ export function publish() {
       console.log(status, response);
     });
   }
-  console.log('pubnub.addListener: ', pubnub.addListener);
   pubnub.addListener({
     status: function(statusEvent) {
       if (statusEvent.category === 'PNConnectedCategory') {
