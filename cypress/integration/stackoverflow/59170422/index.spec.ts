@@ -5,16 +5,14 @@ import { publish, pubnub } from './';
 describe('59170422', () => {
   it('should pass', () => {
     const logSpy = cy.spy(console, 'log');
-    const addListenerStub = cy.stub();
-    const publishStub = cy.stub().resolves({});
-    const subscribeStub = cy.stub();
-    Object.defineProperty(pubnub, 'addListener', { value: addListenerStub });
-    Object.defineProperty(pubnub, 'publish', { value: publishStub });
-    Object.defineProperty(pubnub, 'subscribe', { value: subscribeStub });
+    const addListenerStub = cy.stub(pubnub, 'addListener');
+    const publishStub = cy.stub(pubnub, 'publish').resolves({});
+    const subscribeStub = cy.stub(pubnub, 'subscribe');
     publish();
     addListenerStub.yieldTo('status', { category: 'PNConnectedCategory' });
     expect(addListenerStub).to.have.been.calledOnce;
     expect(publishStub).to.have.been.calledOnce;
+    expect(subscribeStub).to.have.been.calledOnce;
     publishStub.yield(200, 'haha');
     expect(logSpy).to.have.been.calledWith(200, 'haha');
     addListenerStub.yieldTo('message', { message: { title: 'I am title', description: 'I am description' } });
