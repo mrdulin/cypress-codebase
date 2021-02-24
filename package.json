@@ -23,9 +23,11 @@
     "pubnub": "^4.27.2"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.2",
     "@cypress/webpack-preprocessor": "^4.1.1",
     "@types/pubnub": "^4.27.1",
     "cypress": "^3.8.0",
+    "nyc": "^15.1.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3",
