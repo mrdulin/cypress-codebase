@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mrdulin/cypress-codebase#readme",
   "dependencies": {
-    "pubnub": "^4.27.2"
+    "pubnub": "^4.37.0"
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.2",
