@@ -2,23 +2,11 @@
   "name": "cypress-codebase",
   "version": "1.0.0",
   "description": "Learning Cypress testing tool by Examples",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrdulin/cypress-codebase.git"
-  },
-  "keywords": [],
-  "author": "mrdulin <novaline.dulin@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mrdulin/cypress-codebase/issues"
-  },
-  "homepage": "https://github.com/mrdulin/cypress-codebase#readme",
   "dependencies": {
     "pubnub": "^4.37.0"
   },
@@ -26,11 +14,11 @@
     "@cypress/code-coverage": "^3.9.2",
     "@cypress/webpack-preprocessor": "^4.1.1",
     "@types/pubnub": "^4.27.1",
-    "cypress": "^10.9.0",
+    "cypress": "^12.16.0",
     "nyc": "^15.1.0",
-    "ts-loader": "^6.2.1",
-    "ts-node": "^8.5.4",
-    "typescript": "^3.7.3",
-    "webpack": "^4.41.3"
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1"
   }
 }
