@@ -2,6 +2,7 @@
   "name": "cypress-codebase",
   "version": "1.0.0",
   "description": "Learning Cypress testing tool by Examples",
+  "type": "module",
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run"
